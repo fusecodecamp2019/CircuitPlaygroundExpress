@@ -12,7 +12,8 @@ bpm = 120  # beats per minute, change this to suit your tempo
 # enable the speaker
 spkrenable = DigitalInOut(board.SPEAKER_ENABLE)
 spkrenable.direction = Direction.OUTPUT
-spkrenable.value = True
+#spkrenable.value = True ## Send sound out internal speaker and A0 Pin
+spkrenable.value = False ## Only send sound out the A0 Pin
 
 # make the input cap sense pads
 capPins = (board.A1, board.A2, board.A3, board.A4, board.A5,
